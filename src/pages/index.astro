@@ -1,11 +1,204 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import KPIChart from '../components/KPIChart.jsx';
+
+// Sample data for KPI charts
+const salesData = [
+	{ name: 'Jan', value: 12000 },
+	{ name: 'Feb', value: 15000 },
+	{ name: 'Mar', value: 18000 },
+	{ name: 'Apr', value: 22000 },
+	{ name: 'May', value: 25000 },
+	{ name: 'Jun', value: 28000 }
+];
+
+const orderData = [
+	{ name: 'Pepperoni', value: 35, color: '#dc2626' },
+	{ name: 'Margherita', value: 25, color: '#ea580c' },
+	{ name: 'BBQ Chicken', value: 20, color: '#eab308' },
+	{ name: 'Veggie', value: 15, color: '#16a34a' },
+	{ name: 'Hawaiian', value: 5, color: '#3b82f6' }
+];
+
+const revenueData = [
+	{ name: 'Mon', value: 4500 },
+	{ name: 'Tue', value: 5200 },
+	{ name: 'Wed', value: 4800 },
+	{ name: 'Thu', value: 6100 },
+	{ name: 'Fri', value: 7800 },
+	{ name: 'Sat', value: 9200 },
+	{ name: 'Sun', value: 8500 }
+];
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="PizzaWorld - The Ultimate Pizza Management Dashboard">
+	<div class="home-section">
+		<div class="content-container">
+			<!-- Hero Section -->
+			<section class="mb-16">
+				<div class="text-center mb-12">
+					<h1 class="text-heading text-6xl mb-6 bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+						PizzaWorld
+					</h1>
+					<p class="text-subheading text-2xl mb-8 max-w-3xl mx-auto">
+						The Ultimate Pizza Management Dashboard - Streamline your operations, boost sales, and deliver happiness one slice at a time.
+					</p>
+					<div class="flex gap-4 justify-center flex-wrap">
+						<CTAButton text="Try Demo" href="/demo" variant="primary" size="lg" />
+						<CTAButton text="View Documentation" href="/docs" variant="secondary" size="lg" />
+					</div>
+				</div>
+			</section>
+
+			<!-- KPI Dashboard Preview -->
+			<section class="mb-16">
+				<h2 class="text-heading text-4xl mb-8 text-center">Real-Time Dashboard Preview</h2>
+				<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+					<!-- Sales Trend Chart -->
+					<div class="chart-container">
+						<KPIChart 
+							client:load
+							type="line" 
+							data={salesData} 
+							title="Monthly Sales Trend" 
+							color="#ea580c"
+						/>
+					</div>
+					
+					<!-- Popular Orders -->
+					<div class="chart-container">
+						<KPIChart 
+							client:load
+							type="pie" 
+							data={orderData} 
+							title="Popular Pizza Orders" 
+						/>
+					</div>
+					
+					<!-- Weekly Revenue -->
+					<div class="chart-container">
+						<KPIChart 
+							client:load
+							type="bar" 
+							data={revenueData} 
+							title="Weekly Revenue" 
+							color="#f97316"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<!-- Features Section -->
+			<section class="mb-16">
+				<h2 class="text-heading text-4xl mb-12 text-center">Powerful Features</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Feature Card 1 -->
+					<div class="modern-card p-8">
+						<div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+							</svg>
+						</div>
+						<h3 class="text-subheading text-xl mb-4">Real-Time Analytics</h3>
+						<p class="text-body">Monitor sales, orders, and performance metrics in real-time with beautiful, interactive charts and dashboards.</p>
+					</div>
+
+					<!-- Feature Card 2 -->
+					<div class="modern-card p-8">
+						<div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-subheading text-xl mb-4">Order Management</h3>
+						<p class="text-body">Streamline your order process with automated workflows, real-time tracking, and smart notifications.</p>
+					</div>
+
+					<!-- Feature Card 3 -->
+					<div class="modern-card p-8">
+						<div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-subheading text-xl mb-4">Team Management</h3>
+						<p class="text-body">Manage your staff, assign roles, track performance, and ensure smooth operations across all locations.</p>
+					</div>
+
+					<!-- Feature Card 4 -->
+					<div class="modern-card p-8">
+						<div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+							</svg>
+						</div>
+						<h3 class="text-subheading text-xl mb-4">Inventory Control</h3>
+						<p class="text-body">Track ingredients, manage stock levels, set up automatic reordering, and reduce waste with smart inventory management.</p>
+					</div>
+
+					<!-- Feature Card 5 -->
+					<div class="modern-card p-8">
+						<div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+						</div>
+						<h3 class="text-subheading text-xl mb-4">Performance Optimization</h3>
+						<p class="text-body">Identify bottlenecks, optimize workflows, and boost efficiency with AI-powered insights and recommendations.</p>
+					</div>
+
+					<!-- Feature Card 6 -->
+					<div class="modern-card p-8">
+						<div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl flex items-center justify-center mb-6">
+							<svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-subheading text-xl mb-4">Quality Assurance</h3>
+						<p class="text-body">Maintain consistent quality across all locations with standardized processes and quality control measures.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA Section -->
+			<section class="mb-16">
+				<div class="modern-card p-12 text-center">
+					<h2 class="text-heading text-4xl mb-6">Ready to Transform Your Pizza Business?</h2>
+					<p class="text-body text-xl mb-8 max-w-2xl mx-auto">
+						Join thousands of pizza restaurants that have revolutionized their operations with PizzaWorld. Start your free trial today!
+					</p>
+					<div class="flex gap-4 justify-center flex-wrap">
+						<CTAButton text="Start Free Trial" href="/demo" variant="primary" size="lg" />
+						<CTAButton text="Schedule Demo" href="/contact" variant="secondary" size="lg" />
+					</div>
+				</div>
+			</section>
+
+			<!-- Stats Section -->
+			<section class="mb-16">
+				<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+					<div class="text-center">
+						<div class="text-4xl font-bold text-orange-600 mb-2">500+</div>
+						<div class="text-body">Restaurants</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-orange-600 mb-2">50K+</div>
+						<div class="text-body">Orders Daily</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-orange-600 mb-2">99.9%</div>
+						<div class="text-body">Uptime</div>
+					</div>
+					<div class="text-center">
+						<div class="text-4xl font-bold text-orange-600 mb-2">24/7</div>
+						<div class="text-body">Support</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
 </Layout>

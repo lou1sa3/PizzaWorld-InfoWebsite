@@ -1,0 +1,24 @@
+name: Deploy Astro to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install, build, and upload your site
+        uses: withastro/action@v2
+        with:
+          deploy-to: github-pages 
