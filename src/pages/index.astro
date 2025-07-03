@@ -20,16 +20,33 @@ import ContactCTA from '../components/ContactCTA.astro';
 		<section id="home" class="hero-section">
 			<div class="wrapper">
 				<div class="hero-content">
-					<img
-						src="/assets/logo.png"
-						alt="PizzaWorld+ Logo"
-						width="120"
-						height="120"
-						style="max-width: 120px; height: auto; background: transparent;"
-					/>
-					<h1 class="hero-title">
-						PizzaWorld<span class="accent">+</span>
-					</h1>
+					<header class="hero" style="align-items: center;">
+						<img
+							alt="PizzaWorld+ Logo"
+							src="/assets/logo.png"
+							style="max-width: 120px; height: auto; background: transparent;"
+						/>
+						<h1 class="text-5xl font-extrabold tracking-tight text-center" style="font-family: var(--font-brand);">
+							PizzaWorld<span style="color: var(--accent-regular);">+</span>
+						</h1>
+						<div style="margin: 1.5rem 0 1.5rem 0;">
+							<a href="https://github.com/luigids03/PizzaWorld/" class="pulse-github-btn" style="
+								display: inline-block;
+								padding: 0.5rem 1.25rem;
+								font-weight: 600;
+								font-size: 1rem;
+								border-radius: 0.75rem;
+								background: linear-gradient(90deg, #3b82f6 0%, #a21caf 100%);
+								color: white;
+								box-shadow: var(--shadow-md);
+								text-decoration: none;
+								min-width: 90px;
+								text-align: center;
+								letter-spacing: 0.01em;
+								transition: background 0.2s;
+							" target="_blank" rel="noopener noreferrer">GitHub</a>
+						</div>
+					</header>
 					<p class="hero-tagline">
 						Enterprise-grade business intelligence and analytics platform for multi-location pizza chains. 
 						Real-time insights, performance monitoring, and data-driven decision making—built for scale.
@@ -497,5 +514,21 @@ import ContactCTA from '../components/ContactCTA.astro';
 		.tech-grid {
 			grid-template-columns: repeat(2, 1fr);
 		}
+	}
+
+	@keyframes pulse-glow {
+		0% {
+			box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7), 0 0 0 0 rgba(162, 28, 175, 0.5);
+		}
+		70% {
+			box-shadow: 0 0 0 12px rgba(59, 130, 246, 0), 0 0 0 24px rgba(162, 28, 175, 0);
+		}
+		100% {
+			box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7), 0 0 0 0 rgba(162, 28, 175, 0.5);
+		}
+	}
+
+	.pulse-github-btn {
+		animation: pulse-glow 1.8s infinite;
 	}
 </style>
