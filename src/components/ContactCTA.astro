@@ -20,10 +20,10 @@ import Icon from './Icon.astro';
 					<p>Ready to implement PizzaWorld+ in your business?</p>
 				</div>
 				<div class="contact-action">
-					<CallToAction href="mailto:pizzaworldplus@gmail.com">
-						Start Your Journey
-						<Icon icon="arrow-right" size="1.2em" />
-					</CallToAction>
+					<a href="mailto:pizzaworldplus@gmail.com" class="contact-link primary start-journey">
+						<Icon icon="paper-plane-tilt" size="1.1rem" />
+						<span>Start Your Journey</span>
+					</a>
 				</div>
 			</div>
 
@@ -260,6 +260,20 @@ import Icon from './Icon.astro';
 		color: var(--gray-0);
 		border-color: var(--gray-600);
 		transform: translateY(-2px);
+	}
+
+	.contact-link.start-journey {
+		padding: 0.75rem 1rem;
+		border-radius: 0.75rem;
+		min-height: 44px;
+		font-size: var(--text-sm);
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		width: 100%;
+		box-sizing: border-box;
 	}
 
 	.contact-footer {
