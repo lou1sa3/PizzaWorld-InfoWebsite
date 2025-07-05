@@ -6,6 +6,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import CallToAction from '../components/CallToAction.astro';
 import Hero from '../components/Hero.astro';
 import Pill from '../components/Pill.astro';
+import Icon from '../components/Icon.astro';
 
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
@@ -24,28 +25,11 @@ import ContactCTA from '../components/ContactCTA.astro';
 						<img
 							alt="PizzaWorld+ Logo"
 							src="/assets/logo.png"
-							style="max-width: 120px; height: auto; background: transparent;"
+							style="max-width: 200px; height: auto; background: transparent; border-radius: 1rem; box-shadow: var(--shadow-lg); padding: 1rem;"
 						/>
-						<h1 class="text-5xl font-extrabold tracking-tight text-center" style="font-family: var(--font-brand);">
+						<h1 class="text-6xl font-extrabold tracking-tight text-center" style="font-family: var(--font-brand); margin-top: 1.5rem;">
 							PizzaWorld<span style="color: var(--accent-regular);">+</span>
 						</h1>
-						<div style="margin: 1.5rem 0 1.5rem 0;">
-							<a href="https://github.com/luigids03/PizzaWorld/" class="pulse-github-btn" style="
-								display: inline-block;
-								padding: 0.5rem 1.25rem;
-								font-weight: 600;
-								font-size: 1rem;
-								border-radius: 0.75rem;
-								background: linear-gradient(90deg, #3b82f6 0%, #a21caf 100%);
-								color: white;
-								box-shadow: var(--shadow-md);
-								text-decoration: none;
-								min-width: 90px;
-								text-align: center;
-								letter-spacing: 0.01em;
-								transition: background 0.2s;
-							" target="_blank" rel="noopener noreferrer">GitHub</a>
-						</div>
 					</header>
 					<p class="hero-tagline">
 						Enterprise-grade business intelligence and analytics platform for multi-location pizza chains. 
@@ -56,9 +40,54 @@ import ContactCTA from '../components/ContactCTA.astro';
 						<Pill>Real-Time Analytics</Pill>
 						<Pill>Enterprise Grade</Pill>
 					</div>
-					<div class="hero-cta">
-						<CallToAction href="#work">Explore Features</CallToAction>
-						<CallToAction href="#about">Learn More</CallToAction>
+					
+					<!-- Three Action Boxes -->
+					<div class="action-boxes">
+						<div class="action-box">
+							<div class="action-icon">
+								<Icon icon="github-logo" size="2.5rem" />
+							</div>
+							<h3>GitHub Repository</h3>
+							<p>Access the source code and contribute to the project</p>
+							<div class="action-links">
+								<a href="https://github.com/luigids03/PizzaWorld/" class="action-link primary" target="_blank" rel="noopener noreferrer">
+									<Icon icon="github-logo" size="1.2rem" />
+									View Project
+								</a>
+								<a href="https://github.com/luigids03/PizzaWorld/releases" class="action-link secondary" target="_blank" rel="noopener noreferrer">
+									<Icon icon="download" size="1.2rem" />
+									Download
+								</a>
+							</div>
+						</div>
+
+						<div class="action-box featured">
+							<div class="action-icon">
+								<Icon icon="monitor" size="2.5rem" />
+							</div>
+							<h3>Dashboard Access</h3>
+							<p>Access the live dashboard for real-time analytics</p>
+							<div class="action-links">
+								<a href="https://dashboard.pizzaworldplus.tech" class="action-link primary" target="_blank" rel="noopener noreferrer">
+									<Icon icon="monitor" size="1.2rem" />
+									Open Dashboard
+								</a>
+							</div>
+						</div>
+
+						<div class="action-box">
+							<div class="action-icon">
+								<Icon icon="book" size="2.5rem" />
+							</div>
+							<h3>Documentation</h3>
+							<p>Complete guides and API documentation</p>
+							<div class="action-links">
+								<a href="/documentation" class="action-link primary">
+									<Icon icon="book" size="1.2rem" />
+									Read Docs
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -154,6 +183,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 							<li>Customer acquisition and retention analysis</li>
 							<li>Customer segmentation and behavior insights</li>
 							<li>Peak hour identification and optimization</li>
+							<li>Contact support with integrated email service</li>
 						</ul>
 					</div>
 
@@ -207,11 +237,11 @@ import ContactCTA from '../components/ContactCTA.astro';
 						<div class="tech-card">
 							<h4>Performance & Security</h4>
 							<ul>
-								<li>50+ materialized views for fast analytics</li>
-								<li>Multi-level caching with 10-minute TTL</li>
-								<li>Role-based access control (HQ_ADMIN, STATE_MANAGER, STORE_MANAGER)</li>
-								<li>BCrypt password hashing and CSRF protection</li>
-								<li>Secure HTTP headers and CORS configuration</li>
+								<li>50+ materialized views for lightning-fast analytics</li>
+								<li>Multi-level caching with HikariCP connection pooling</li>
+								<li>Enterprise security: JWT auth, RBAC, and CSRF protection</li>
+								<li>Advanced protection: XSS/SQL injection prevention, rate limiting</li>
+								<li>Production-ready: SSL/TLS, audit logging, Docker deployment</li>
 							</ul>
 						</div>
 
@@ -246,26 +276,26 @@ import ContactCTA from '../components/ContactCTA.astro';
 
 	/* Hero Section */
 	.hero-section {
-		min-height: 100vh;
+		min-height: 80vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		padding: 2rem 0;
+		padding: 1rem 0;
 	}
 
 	.hero-content {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 2rem;
-		max-width: 800px;
+		gap: 3rem;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 
 	.hero-logo {
-		width: 120px;
-		height: 120px;
+		width: 200px;
+		height: 200px;
 		border-radius: 2rem;
 		box-shadow: var(--shadow-lg);
 		background: white;
@@ -273,7 +303,7 @@ import ContactCTA from '../components/ContactCTA.astro';
 	}
 
 	.hero-title {
-		font-size: var(--text-5xl);
+		font-size: var(--text-6xl);
 		font-family: var(--font-brand);
 		font-weight: 700;
 		margin: 0;
@@ -299,11 +329,156 @@ import ContactCTA from '../components/ContactCTA.astro';
 		justify-content: center;
 	}
 
-	.hero-cta {
+	/* Action Boxes */
+	.action-boxes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		width: 100%;
+		max-width: 1000px;
+		margin-top: 2rem;
+	}
+
+	.action-box {
+		background: var(--gradient-subtle);
+		border: 1px solid var(--gray-800);
+		border-radius: 1.5rem;
+		padding: 2rem;
+		text-align: center;
+		transition: all 0.3s ease;
+		position: relative;
+		overflow: hidden;
 		display: flex;
-		gap: 1rem;
-		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 280px;
+	}
+
+	.action-box::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: var(--accent-regular);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.action-box:hover::before {
+		opacity: 1;
+	}
+
+	.action-box.featured {
+		background: linear-gradient(135deg, var(--accent-regular), var(--accent-dark));
+		color: var(--gray-0);
+		transform: scale(1.05);
+		box-shadow: var(--shadow-lg);
+		border-color: var(--accent-light);
+	}
+
+	.action-box.featured::before {
+		opacity: 1;
+		background: var(--gray-0);
+	}
+
+	.action-box:hover {
+		transform: translateY(-5px);
+		box-shadow: var(--shadow-lg);
+	}
+
+	.action-box.featured:hover {
+		transform: scale(1.05) translateY(-5px);
+		box-shadow: var(--shadow-xl);
+	}
+
+	.action-icon {
+		margin-bottom: 1rem;
+		color: var(--accent-regular);
+	}
+
+	.action-box.featured .action-icon {
+		color: var(--gray-0);
+	}
+
+	.action-box h3 {
+		font-size: var(--text-xl);
+		font-weight: 600;
+		margin-bottom: 1rem;
+		color: var(--gray-0);
+	}
+
+	.action-box p {
+		color: var(--gray-300);
+		margin-bottom: 1.5rem;
+		line-height: 1.5;
+	}
+
+	.action-box.featured p {
+		color: var(--gray-100);
+	}
+
+	.action-links {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		margin-top: auto;
+	}
+
+	.action-link {
+		display: flex;
+		align-items: center;
 		justify-content: center;
+		gap: 0.5rem;
+		padding: 1rem 1rem;
+		border-radius: 0.75rem;
+		text-decoration: none;
+		font-weight: 500;
+		transition: all 0.2s ease;
+		font-size: var(--text-sm);
+		min-height: 48px;
+		box-sizing: border-box;
+		text-align: center;
+		flex: 1;
+		width: 100%;
+	}
+
+	.action-link.primary {
+		background: var(--accent-regular);
+		color: var(--gray-0);
+		flex: 1;
+		width: 100%;
+	}
+
+	.action-link.primary:hover {
+		background: var(--accent-dark);
+		transform: translateY(-2px);
+	}
+
+	.action-box.featured .action-link.primary {
+		background: var(--gray-0);
+		color: var(--accent-regular);
+		flex: 1;
+		width: 100%;
+	}
+
+	.action-box.featured .action-link.primary:hover {
+		background: var(--gray-100);
+	}
+
+	.action-link.secondary {
+		background: var(--gray-800);
+		color: var(--gray-300);
+		border: 1px solid var(--gray-700);
+		flex: 1;
+		width: 100%;
+	}
+
+	.action-link.secondary:hover {
+		background: var(--gray-700);
+		color: var(--gray-0);
+		transform: translateY(-2px);
 	}
 
 	/* Section Styles */
@@ -488,12 +663,12 @@ import ContactCTA from '../components/ContactCTA.astro';
 	/* Responsive adjustments */
 	@media (min-width: 50em) {
 		.hero-logo {
-			width: 150px;
-			height: 150px;
+			width: 250px;
+			height: 250px;
 		}
 
 		.hero-title {
-			font-size: var(--text-6xl);
+			font-size: var(--text-7xl);
 		}
 
 		.about-content {
@@ -503,6 +678,21 @@ import ContactCTA from '../components/ContactCTA.astro';
 
 		.metrics-showcase {
 			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.action-boxes {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		.action-links {
+			flex-direction: row;
+			gap: 0.5rem;
+		}
+
+		.action-link {
+			flex: 1;
+			padding: 0.875rem 0.5rem;
+			font-size: 0.85rem;
 		}
 	}
 
@@ -514,21 +704,5 @@ import ContactCTA from '../components/ContactCTA.astro';
 		.tech-grid {
 			grid-template-columns: repeat(2, 1fr);
 		}
-	}
-
-	@keyframes pulse-glow {
-		0% {
-			box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7), 0 0 0 0 rgba(162, 28, 175, 0.5);
-		}
-		70% {
-			box-shadow: 0 0 0 12px rgba(59, 130, 246, 0), 0 0 0 24px rgba(162, 28, 175, 0);
-		}
-		100% {
-			box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7), 0 0 0 0 rgba(162, 28, 175, 0.5);
-		}
-	}
-
-	.pulse-github-btn {
-		animation: pulse-glow 1.8s infinite;
 	}
 </style>

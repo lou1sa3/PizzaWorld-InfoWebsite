@@ -1,0 +1,515 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
+---
+
+<BaseLayout title="Blog | PizzaWorld+" description="Latest updates and insights from the PizzaWorld+ development team">
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<header class="hero">
+				<div class="hero-content">
+					<h1 class="hero-title">
+						Development <span class="text-gradient">Blog</span>
+					</h1>
+					<p class="hero-tagline">
+						Follow our journey as we build the future of pizza restaurant management
+					</p>
+				</div>
+			</header>
+
+			<section class="contributors-section">
+				<div class="section-header">
+					<h2>Our Contributors</h2>
+					<p>The developers working on <a href="https://github.com/lou1sa3/pizzaWorldDashboardDemo" target="_blank" rel="noopener noreferrer" class="project-link"><Icon icon="github-logo" size="1rem" /><strong>PizzaWorld+</strong></a></p>
+				</div>
+
+				<!-- Lou1sa3 - Developer -->
+				<div class="contributor-section">
+					<div class="contributor-header">
+						<div class="contributor-avatar">
+							<img src="https://github.com/lou1sa3.png" alt="lou1sa3" />
+						</div>
+						<div class="contributor-info">
+							<h3>
+								<a href="https://github.com/lou1sa3" target="_blank" rel="noopener noreferrer" class="contributor-name">
+									<Icon icon="github-logo" size="1.2rem" />
+									lou1sa3
+								</a>
+							</h3>
+						</div>
+					</div>
+
+					<div class="blog-grid">
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="code" size="1.5rem" />
+							</div>
+							<h4>Dashboard Analytics Implementation</h4>
+							<p>Implemented analytics system with data visualization for restaurant owners. The dashboard provides insights into sales patterns, customer behavior, and operations.</p>
+							<div class="blog-tags">
+								<span class="tag">Analytics</span>
+								<span class="tag">React</span>
+								<span class="tag">Charts</span>
+							</div>
+						</article>
+
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="strategy" size="1.5rem" />
+							</div>
+							<h4>Security Infrastructure</h4>
+							<p>Added security measures including JWT authentication, XSS protection, and encryption. Improved platform security for customer and business data protection.</p>
+							<div class="blog-tags">
+								<span class="tag">Security</span>
+								<span class="tag">JWT</span>
+								<span class="tag">Encryption</span>
+							</div>
+						</article>
+
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="paper-plane-tilt" size="1.5rem" />
+							</div>
+							<h4>Email Notification System</h4>
+							<p>Created an automated email service for customer notifications about order updates, delivery status, and promotional offers. Handles daily email operations reliably.</p>
+							<div class="blog-tags">
+								<span class="tag">Email</span>
+								<span class="tag">Automation</span>
+								<span class="tag">API</span>
+							</div>
+						</article>
+
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="monitor" size="1.5rem" />
+							</div>
+							<h4>UI/UX Design</h4>
+							<p>Redesigned the user interface with a mobile-first approach for better compatibility across devices. Improved overall user experience and interface design.</p>
+							<div class="blog-tags">
+								<span class="tag">UI/UX</span>
+								<span class="tag">Responsive</span>
+								<span class="tag">Design</span>
+							</div>
+						</article>
+
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="rocket-launch" size="1.5rem" />
+							</div>
+							<h4>Performance Optimization</h4>
+							<p>Improved database queries and implemented caching strategies to reduce page load times. Enhanced platform performance and user experience.</p>
+							<div class="blog-tags">
+								<span class="tag">Performance</span>
+								<span class="tag">Caching</span>
+								<span class="tag">Database</span>
+							</div>
+						</article>
+					</div>
+					
+					<div class="collaboration-note">
+						<p>In collaboration with <a href="https://github.com/smajli7" target="_blank" rel="noopener noreferrer" class="collaboration-link"><Icon icon="github-logo" size="1rem" /><strong>smajli7</strong></a></p>
+					</div>
+				</div>
+
+				<!-- Smajli7 - Developer -->
+				<div class="contributor-section">
+					<div class="contributor-header">
+						<div class="contributor-avatar">
+							<img src="https://github.com/smajli7.png" alt="smajli7" />
+						</div>
+						<div class="contributor-info">
+							<h3>
+								<a href="https://github.com/smajli7" target="_blank" rel="noopener noreferrer" class="contributor-name">
+									<Icon icon="github-logo" size="1.2rem" />
+									smajli7
+								</a>
+							</h3>
+						</div>
+					</div>
+
+					<div class="blog-grid">
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="rocket-launch" size="1.5rem" />
+							</div>
+							<h4>Core Architecture & Foundation</h4>
+							<p>Developed the main architecture for the PizzaWorld+ platform, focusing on scalability and maintainability. Built a modular design for easier feature development and service integration.</p>
+							<div class="blog-tags">
+								<span class="tag">Architecture</span>
+								<span class="tag">Foundation</span>
+								<span class="tag">Scalability</span>
+							</div>
+						</article>
+
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="terminal-window" size="1.5rem" />
+							</div>
+							<h4>Order Management System</h4>
+							<p>Built an order processing system that handles pizza customizations, inventory tracking, and kitchen workflow management. Improved order processing efficiency.</p>
+							<div class="blog-tags">
+								<span class="tag">Orders</span>
+								<span class="tag">Inventory</span>
+								<span class="tag">Automation</span>
+							</div>
+						</article>
+
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="heart" size="1.5rem" />
+							</div>
+							<h4>Customer Relationship Management</h4>
+							<p>Developed a CRM system for tracking customer preferences, order history, and loyalty rewards. Implemented personalized features to improve customer experience.</p>
+							<div class="blog-tags">
+								<span class="tag">CRM</span>
+								<span class="tag">Loyalty</span>
+								<span class="tag">Personalization</span>
+							</div>
+						</article>
+
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="trophy" size="1.5rem" />
+							</div>
+							<h4>Business Intelligence Dashboard</h4>
+							<p>Created analytics and reporting tools for restaurant owners. The dashboard includes trend analysis and automated report generation features.</p>
+							<div class="blog-tags">
+								<span class="tag">BI</span>
+								<span class="tag">Analytics</span>
+								<span class="tag">Reporting</span>
+							</div>
+						</article>
+
+						<article class="blog-card">
+							<div class="blog-header">
+								<Icon icon="monitor" size="1.5rem" />
+							</div>
+							<h4>Progressive Web App</h4>
+							<p>Built a mobile-responsive PWA that works across different devices. Added offline functionality and push notifications for better user experience.</p>
+							<div class="blog-tags">
+								<span class="tag">PWA</span>
+								<span class="tag">Mobile</span>
+								<span class="tag">Offline</span>
+							</div>
+						</article>
+					</div>
+					
+					<div class="collaboration-note">
+						<p>In collaboration with <a href="https://github.com/lou1sa3" target="_blank" rel="noopener noreferrer" class="collaboration-link"><Icon icon="github-logo" size="1rem" /><strong>lou1sa3</strong></a></p>
+					</div>
+				</div>
+
+				<!-- Other Contributors (Placeholder) -->
+				<div class="contributor-section">
+					<div class="contributor-header">
+						<div class="contributor-avatar">
+							<img src="https://github.com/youssefabbou.png" alt="youssefabbou" />
+						</div>
+						<div class="contributor-info">
+							<h3>youssefabbou</h3>
+						</div>
+					</div>
+					<div class="blog-grid">
+						<div class="blog-placeholder">
+							<p>Blog entries coming soon...</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="contributor-section">
+					<div class="contributor-header">
+						<div class="contributor-avatar">
+							<img src="https://github.com/Esrayigen.png" alt="Esrayigen" />
+						</div>
+						<div class="contributor-info">
+							<h3>Esrayigen</h3>
+						</div>
+					</div>
+					<div class="blog-grid">
+						<div class="blog-placeholder">
+							<p>Blog entries coming soon...</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="contributor-section">
+					<div class="contributor-header">
+						<div class="contributor-avatar">
+							<img src="https://github.com/luigids03.png" alt="luigids03" />
+						</div>
+						<div class="contributor-info">
+							<h3>luigids03</h3>
+						</div>
+					</div>
+					<div class="blog-grid">
+						<div class="blog-placeholder">
+							<p>Blog entries coming soon...</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</BaseLayout>
+
+<style>
+	.hero {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		padding: 4rem 0;
+		text-align: center;
+	}
+
+	.hero-content {
+		max-width: 50rem;
+	}
+
+	.hero-title {
+		font-size: var(--text-5xl);
+		font-weight: 900;
+		line-height: 1.1;
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+	}
+
+	.hero-tagline {
+		font-size: var(--text-xl);
+		color: var(--gray-300);
+		line-height: 1.4;
+	}
+
+	.text-gradient {
+		background: var(--gradient-accent);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.contributors-section {
+		padding: 2rem 0;
+	}
+
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+
+	.section-header h2 {
+		font-size: var(--text-3xl);
+		font-weight: 700;
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+	}
+
+	.section-header p {
+		font-size: var(--text-lg);
+		color: var(--gray-300);
+	}
+
+	.contributor-section {
+		margin-bottom: 6rem;
+		padding: 2rem;
+		background: var(--gray-999);
+		border-radius: 1rem;
+		border: 1px solid var(--gray-800);
+	}
+
+	.contributor-header {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-bottom: 3rem;
+		padding-bottom: 1.5rem;
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.contributor-avatar {
+		width: 4rem;
+		height: 4rem;
+		border-radius: 50%;
+		overflow: hidden;
+		border: 2px solid var(--accent-regular);
+	}
+
+	.contributor-avatar img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.contributor-info h3 {
+		font-size: var(--text-xl);
+		font-weight: 600;
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.collaboration-note {
+		margin-top: 2rem;
+		padding: 1rem;
+		background: var(--gray-800);
+		border-radius: 0.5rem;
+		border-left: 3px solid var(--accent-regular);
+		text-align: center;
+	}
+
+	.collaboration-note p {
+		color: var(--gray-300);
+		font-size: var(--text-sm);
+		margin: 0;
+	}
+
+	.collaboration-note strong {
+		color: var(--accent-regular);
+	}
+
+	.contributor-name {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: var(--gray-0);
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	.contributor-name svg {
+		color: var(--gray-400);
+		transition: color 0.3s ease;
+	}
+
+	.contributor-name:hover {
+		color: var(--accent-regular);
+		transform: translateX(2px);
+	}
+
+	.contributor-name:hover svg {
+		color: var(--accent-regular);
+	}
+
+	.collaboration-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	.collaboration-link svg {
+		color: var(--gray-400);
+		transition: color 0.3s ease;
+	}
+
+	.collaboration-link:hover {
+		text-decoration: underline;
+		transform: translateX(2px);
+	}
+
+	.collaboration-link:hover svg {
+		color: var(--accent-regular);
+	}
+
+	.collaboration-link strong {
+		color: var(--accent-regular);
+		transition: color 0.3s ease;
+	}
+
+	.collaboration-link:hover strong {
+		color: var(--accent-text-over);
+	}
+
+	.blog-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.blog-card {
+		background: var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 2rem;
+		border: 1px solid var(--gray-700);
+		transition: all 0.3s ease;
+	}
+
+	.blog-card:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+		border-color: var(--accent-regular);
+	}
+
+
+
+	.blog-header {
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
+	.blog-header svg {
+		color: var(--accent-regular);
+	}
+
+	.blog-card h4 {
+		font-size: var(--text-lg);
+		font-weight: 600;
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+		line-height: 1.3;
+	}
+
+	.blog-card p {
+		color: var(--gray-300);
+		line-height: 1.6;
+		margin-bottom: 1.5rem;
+	}
+
+	.blog-tags {
+		display: flex;
+		gap: 0.5rem;
+		flex-wrap: wrap;
+	}
+
+	.tag {
+		padding: 0.25rem 0.75rem;
+		background: var(--accent-subtle);
+		color: var(--accent-text-over);
+		font-size: var(--text-xs);
+		border-radius: 999rem;
+		font-weight: 500;
+	}
+
+	.blog-placeholder {
+		grid-column: 1 / -1;
+		text-align: center;
+		padding: 4rem 2rem;
+		color: var(--gray-400);
+		font-style: italic;
+	}
+
+	@media (max-width: 50em) {
+		.hero-title {
+			font-size: var(--text-3xl);
+		}
+
+		.hero-tagline {
+			font-size: var(--text-lg);
+		}
+
+		.contributor-header {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.contributor-avatar {
+			width: 3rem;
+			height: 3rem;
+		}
+
+		.blog-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style> 
