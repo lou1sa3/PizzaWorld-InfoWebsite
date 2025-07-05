@@ -6,9 +6,14 @@
 
 This is the **official website** for **PizzaWorld+**, an enterprise-grade business intelligence and analytics platform for multi-location pizza chains.
 
-**Live Website**: [www.pizzaworldplus.tech](https://www.pizzaworldplus.tech)
+## Project Links
 
-**Main Application Repository**: [https://github.com/lou1sa3/PizzaWorld](https://github.com/lou1sa3/PizzaWorld)
+| Resource | URL |
+|----------|-----|
+| **Official Website** | [www.pizzaworldplus.tech](https://www.pizzaworldplus.tech) |
+| **Main Application Repository** | [github.com/lou1sa3/PizzaWorld](https://github.com/lou1sa3/PizzaWorld) |
+| **Live Dashboard** | [dashboard.pizzaworldplus.tech](https://dashboard.pizzaworldplus.tech) |
+| **Documentation** | [doku.pizzaworldplus.tech](https://doku.pizzaworldplus.tech) |
 
 ## Academic Context
 
@@ -109,19 +114,12 @@ All commands are run from the root of the project, from a terminal:
 └── package.json
 ```
 
-## Related Links
-
-- **Main Application**: [PizzaWorld+ GitHub Repository](https://github.com/lou1sa3/PizzaWorld)
-- **Live Dashboard**: [dashboard.pizzaworldplus.tech](https://dashboard.pizzaworldplus.tech)
-- **Documentation**: [doku.pizzaworldplus.tech](https://doku.pizzaworldplus.tech)
-- **Website**: [www.pizzaworldplus.tech](https://www.pizzaworldplus.tech)
-
 ## Contributors
 
 This official website was developed by:
 
-- **[lou1sa3](https://github.com/lou1sa3)** - Lead Developer, UI/UX Design
-- **[smajli7](https://github.com/smajli7)** - Core Architecture, Backend Integration
+- **[lou1sa3](https://github.com/lou1sa3)** 
+- **[smajli7](https://github.com/smajli7)** 
 
 ## License
 
