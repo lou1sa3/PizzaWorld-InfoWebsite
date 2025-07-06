@@ -17,6 +17,27 @@ import Icon from '../components/Icon.astro';
 				</div>
 			</header>
 
+			<!-- Complete Technical Documentation Section -->
+			<section class="tech-docs-section">
+				<div class="wrapper">
+					<div class="tech-docs-header">
+						<h2>Complete Technical Documentation</h2>
+						<p>Download comprehensive documentation including detailed code examples, API specifications, database schemas, and deployment guides.</p>
+					</div>
+					
+					<div class="download-buttons-container">
+						<a href="/assets/PizzaWorldPlus_Instructions.pdf" class="download-button primary" target="_blank" rel="noopener noreferrer">
+							<Icon icon="download" size="1.2rem" />
+							Installation & Setup Guide
+						</a>
+						<a href="/assets/PizzaWorldPlus_CodeDocumentation.pdf" class="download-button secondary" target="_blank" rel="noopener noreferrer">
+							<Icon icon="code" size="1.2rem" />
+							Technical Code Documentation
+						</a>
+					</div>
+				</div>
+			</section>
+
 			<div class="documentation-container">
 				<aside class="sidebar">
 					<div class="sidebar-header">
@@ -38,26 +59,32 @@ import Icon from '../components/Icon.astro';
 							</li>
 							<li class="nav-item">
 								<a href="#authentication" class="nav-link">
-									<Icon icon="strategy" size="1rem" />
+									<Icon icon="shield-check" size="1rem" />
 									Authentication
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#database" class="nav-link">
-									<Icon icon="terminal-window" size="1rem" />
+									<Icon icon="database" size="1rem" />
 									Database Schema
 								</a>
 							</li>
 							<li class="nav-item">
 								<a href="#deployment" class="nav-link">
-									<Icon icon="paper-plane-tilt" size="1rem" />
+									<Icon icon="cpu" size="1rem" />
 									Deployment
 								</a>
 							</li>
 							<li class="nav-item">
-								<a href="#examples" class="nav-link">
-									<Icon icon="book" size="1rem" />
-									Examples
+								<a href="#demo-data" class="nav-link">
+									<Icon icon="chart-bar" size="1rem" />
+									Demo Data
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="#ai-integration" class="nav-link">
+									<Icon icon="brain" size="1rem" />
+									AI Integration
 								</a>
 							</li>
 						</ul>
@@ -68,48 +95,500 @@ import Icon from '../components/Icon.astro';
 
 				<div class="content-area">
 					<div class="content-header">
-						<div class="status-badge">
-							<Icon icon="pencil-line" size="0.875rem" />
-							<span>Under Construction</span>
+						<div class="status-badge complete">
+							<Icon icon="trophy" size="0.875rem" />
+							<span>Complete</span>
 						</div>
-						<h2>Documentation Content</h2>
-						<p>This section will contain technical documentation generated from LaTeX source.</p>
+						<h2>Technical Documentation</h2>
+						<p>Complete developer guide and technical reference for the PizzaWorld Dashboard system.</p>
 					</div>
 
-					<div class="content-placeholder">
-						<div class="placeholder-content">
-							<div class="placeholder-icon">
-								<Icon icon="book" size="4rem" />
+					<div class="documentation-content">
+						<!-- System Architecture -->
+						<section class="doc-section" id="getting-started">
+							<h3>System Architecture</h3>
+							<div class="architecture-overview">
+								<p>PizzaWorld is a full-stack business intelligence dashboard with microservices architecture:</p>
+								<ul class="feature-list">
+									<li><strong>Backend:</strong> Spring Boot REST API with 90+ endpoints</li>
+									<li><strong>Frontend:</strong> Angular SPA with TypeScript</li>
+									<li><strong>AI Layer:</strong> Google Gemma integration with knowledge base</li>
+									<li><strong>Security:</strong> JWT authentication with role-based access</li>
+									<li><strong>Database:</strong> Supabase PostgreSQL with 15+ materialized views</li>
+									<li><strong>Analytics:</strong> Advanced store, customer, and product analytics</li>
+									<li><strong>Export System:</strong> Comprehensive CSV export for all data views</li>
+									<li><strong>Email Support:</strong> Background email processing system</li>
+								</ul>
 							</div>
-							<h3>Documentation Content</h3>
-							<p>This area is reserved for technical documentation that will be generated from LaTeX source files.</p>
-							<div class="placeholder-features">
-								<div class="feature-item">
-									<Icon icon="code" size="1.2rem" />
-									<span>API Documentation</span>
-								</div>
-								<div class="feature-item">
-									<Icon icon="terminal-window" size="1.2rem" />
-									<span>Database Schema</span>
-								</div>
-								<div class="feature-item">
-									<Icon icon="strategy" size="1.2rem" />
-									<span>Security & Authentication</span>
-								</div>
-								<div class="feature-item">
-									<Icon icon="paper-plane-tilt" size="1.2rem" />
-									<span>Deployment Guide</span>
-								</div>
-								<div class="feature-item">
-									<Icon icon="book" size="1.2rem" />
-									<span>Code Examples</span>
-								</div>
-								<div class="feature-item">
-									<Icon icon="trophy" size="1.2rem" />
-									<span>Implementation Guide</span>
+
+							<div class="system-requirements">
+								<h4>System Requirements</h4>
+								<ul class="feature-list">
+									<li><strong>Java:</strong> Java 17 or higher (OpenJDK or Oracle JDK)</li>
+									<li><strong>Node.js:</strong> Node.js 18 or higher with npm 9+</li>
+									<li><strong>Browser:</strong> Modern web browser (Chrome, Firefox, Safari, Edge)</li>
+									<li><strong>Operating System:</strong> Windows 10+, macOS 10.15+, or Linux</li>
+									<li><strong>Database:</strong> No PostgreSQL installation required (uses Supabase cloud)</li>
+									<li><strong>Memory:</strong> Minimum 4GB RAM recommended for development</li>
+								</ul>
+								<div class="security-note">
+									<h5>🔒 Security Note</h5>
+									<p>Always use the provided start scripts (<code>start.bat</code> / <code>start.sh</code>). Direct execution will fail due to missing environment variables for security.</p>
 								</div>
 							</div>
-						</div>
+
+							<div class="tech-stack">
+								<h4>Technology Stack</h4>
+								<div class="tech-grid">
+									<div class="tech-item">
+										<strong>Backend Framework:</strong> Spring Boot 3.4.6
+									</div>
+									<div class="tech-item">
+										<strong>Security:</strong> Spring Security 6.x
+									</div>
+									<div class="tech-item">
+										<strong>Database:</strong> PostgreSQL (Supabase)
+									</div>
+									<div class="tech-item">
+										<strong>Frontend Framework:</strong> Angular 19
+									</div>
+									<div class="tech-item">
+										<strong>Language:</strong> TypeScript 5.7
+									</div>
+									<div class="tech-item">
+										<strong>UI Library:</strong> PrimeNG + Tailwind
+									</div>
+									<div class="tech-item">
+										<strong>Charts:</strong> ApexCharts 3.41
+									</div>
+									<div class="tech-item">
+										<strong>AI Integration:</strong> Google Gemma
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- API Reference -->
+						<section class="doc-section" id="api-reference">
+							<h3>API Reference</h3>
+							<div class="code-block">
+								<h4>Backend Package Structure</h4>
+								<pre><code>src/main/java/pizzaworld/
+├── controller/          # REST API Controllers
+│   ├── AuthController.java
+│   ├── OptimizedPizzaController.java
+│   ├── AIController.java
+│   └── SupportController.java
+├── service/            # Business Logic Layer
+│   ├── OptimizedPizzaService.java
+│   ├── AIService.java
+│   ├── GemmaAIService.java
+│   └── EmailService.java
+├── repository/         # Data Access Layer
+│   ├── OptimizedPizzaRepo.java
+│   └── UserRepo.java
+├── model/             # Entity Classes
+│   ├── User.java
+│   ├── ChatMessage.java
+│   └── AIInsight.java
+├── security/          # Security Components
+│   ├── JwtAuthFilter.java
+│   └── SecurityConfig.java
+└── config/           # Configuration Classes
+    ├── CorsConfig.java
+    └── EmailConfig.java</code></pre>
+							</div>
+
+							<div class="api-endpoints">
+								<h4>Core API Endpoints</h4>
+								<div class="endpoint-group">
+									<h5>Authentication</h5>
+									<div class="endpoint">
+										<span class="method post">POST</span>
+										<span class="path">/api/login</span>
+										<span class="description">User authentication with JWT token generation</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/me</span>
+										<span class="description">Current user information and permissions</span>
+									</div>
+								</div>
+
+								<div class="endpoint-group">
+									<h5>Dashboard & Analytics</h5>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/dashboard/kpis</span>
+										<span class="description">Main KPI metrics with role-based filtering</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/orders/recent</span>
+										<span class="description">Recent orders with pagination support</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/analytics/revenue/by-year</span>
+										<span class="description">Annual revenue trends and forecasting</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/analytics/customer-lifetime-value</span>
+										<span class="description">Customer segmentation and CLV analysis</span>
+									</div>
+								</div>
+
+								<div class="endpoint-group">
+									<h5>Store Analytics</h5>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/stores</span>
+										<span class="description">Store directory with role-based filtering</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/stores/performance</span>
+										<span class="description">Store performance analytics with benchmarking</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/stores/&#123;storeId&#125;/analytics/overview</span>
+										<span class="description">Individual store comprehensive analytics</span>
+									</div>
+								</div>
+
+								<div class="endpoint-group">
+									<h5>Product Analytics</h5>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/products</span>
+										<span class="description">Product catalog with advanced filtering</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/products/performance</span>
+										<span class="description">Product performance analytics and trends</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/products/kpi</span>
+										<span class="description">Product KPIs with comparative analysis</span>
+									</div>
+								</div>
+
+								<div class="endpoint-group">
+									<h5>Customer Analytics</h5>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/analytics/customer-lifetime-value</span>
+										<span class="description">Customer segmentation and CLV analysis</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/analytics/customer-retention</span>
+										<span class="description">Customer retention analysis and cohort tracking</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/analytics/store-capacity-v3/metrics</span>
+										<span class="description">Advanced store capacity and utilization metrics</span>
+									</div>
+								</div>
+
+								<div class="endpoint-group">
+									<h5>AI Assistant</h5>
+									<div class="endpoint">
+										<span class="method post">POST</span>
+										<span class="path">/api/ai/chat</span>
+										<span class="description">AI chat interaction with business context</span>
+									</div>
+									<div class="endpoint">
+										<span class="method post">POST</span>
+										<span class="path">/api/ai/chat/stream</span>
+										<span class="description">Real-time streaming AI responses (SSE)</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/ai/insights</span>
+										<span class="description">AI-generated business insights and recommendations</span>
+									</div>
+								</div>
+
+								<div class="endpoint-group">
+									<h5>Data Export</h5>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/dashboard/kpis/export</span>
+										<span class="description">Export dashboard KPIs to CSV</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/orders/export</span>
+										<span class="description">Export filtered orders with role-based access</span>
+									</div>
+									<div class="endpoint">
+										<span class="method get">GET</span>
+										<span class="path">/api/v2/stores/performance/export</span>
+										<span class="description">Export store performance analytics</span>
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- Authentication -->
+						<section class="doc-section" id="authentication">
+							<h3>Security & Authentication</h3>
+							<div class="security-features">
+								<h4>Security Implementation</h4>
+								<ul class="feature-list">
+									<li><strong>JWT Authentication:</strong> Stateless token-based authentication with 24-hour expiration</li>
+									<li><strong>Role-based Access Control:</strong> HQ_ADMIN, STATE_MANAGER, STORE_MANAGER permissions</li>
+									<li><strong>BCrypt Password Hashing:</strong> Secure credential storage with salt rounds</li>
+									<li><strong>Spring Security 6:</strong> Comprehensive security framework with CSRF protection</li>
+									<li><strong>CORS Configuration:</strong> Cross-origin resource sharing for frontend integration</li>
+									<li><strong>Environment Variables:</strong> No hardcoded credentials in source code</li>
+								</ul>
+							</div>
+
+							<div class="auth-flow">
+								<h4>Authentication Flow</h4>
+								<ol class="auth-steps">
+									<li>User submits credentials to <code>/api/login</code> endpoint</li>
+									<li>Server validates credentials against BCrypt hash in database</li>
+									<li>JWT token generated with user role and permissions embedded</li>
+									<li>Token returned to client with 24-hour expiration time</li>
+									<li>Client includes token in Authorization header for subsequent requests</li>
+									<li>JwtAuthFilter validates token signature and expiration on each request</li>
+									<li>Security context set with user details and role-based permissions</li>
+								</ol>
+							</div>
+
+							<div class="role-permissions">
+								<h4>Role-Based Permissions</h4>
+								<div class="permissions-grid">
+									<div class="permission-item">
+										<strong>HQ_ADMIN:</strong> Full system access, all stores and states
+									</div>
+									<div class="permission-item">
+										<strong>STATE_MANAGER:</strong> State-level access, multiple stores within assigned state
+									</div>
+									<div class="permission-item">
+										<strong>STORE_MANAGER:</strong> Store-specific access, single store operations
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- Database Schema -->
+						<section class="doc-section" id="database">
+							<h3>Database Architecture</h3>
+							<div class="database-features">
+								<h4>Database Optimization</h4>
+								<ul class="feature-list">
+									<li><strong>Materialized Views:</strong> 15+ pre-computed views for sub-100ms response times</li>
+									<li><strong>Role-based Data Access:</strong> Automatic filtering by user permissions</li>
+									<li><strong>Connection Pooling:</strong> HikariCP with 30 max connections and optimized timeouts</li>
+									<li><strong>Query Optimization:</strong> Native SQL with strategic indexing</li>
+									<li><strong>Supabase Integration:</strong> Cloud PostgreSQL with SSL/TLS encryption</li>
+									<li><strong>Performance Monitoring:</strong> Query execution time tracking and optimization</li>
+								</ul>
+							</div>
+
+							<div class="materialized-views">
+								<h4>Key Materialized Views</h4>
+								<div class="view-grid">
+									<div class="view-item">
+										<strong>kpis_global_hq:</strong> Company-wide KPI metrics
+									</div>
+									<div class="view-item">
+										<strong>kpis_global_state:</strong> State-level performance data
+									</div>
+									<div class="view-item">
+										<strong>kpis_global_store:</strong> Individual store analytics
+									</div>
+									<div class="view-item">
+										<strong>revenue_by_year_hq:</strong> Annual revenue trends
+									</div>
+									<div class="view-item">
+										<strong>customer_lifetime_value:</strong> CLV analysis and segmentation
+									</div>
+									<div class="view-item">
+										<strong>store_performance_hq:</strong> Store ranking and benchmarking
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- Deployment -->
+						<section class="doc-section" id="deployment">
+							<h3>Deployment & Performance</h3>
+							<div class="performance-metrics">
+								<h4>Performance Achievements</h4>
+								<div class="metrics-grid">
+									<div class="metric-item">
+										<span class="metric-value">Sub-100ms</span>
+										<span class="metric-label">Query Response Time</span>
+									</div>
+									<div class="metric-item">
+										<span class="metric-value">100+</span>
+										<span class="metric-label">Store Locations Supported</span>
+									</div>
+									<div class="metric-item">
+										<span class="metric-value">99.9%</span>
+										<span class="metric-label">Data Accuracy</span>
+									</div>
+									<div class="metric-item">
+										<span class="metric-value">30</span>
+										<span class="metric-label">Max DB Connections</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="deployment-info">
+								<h4>Deployment Configuration</h4>
+								<ul class="feature-list">
+									<li><strong>Docker Containerization:</strong> Eclipse Temurin JDK 17 with optimized layers</li>
+									<li><strong>JVM Optimization:</strong> G1GC with 2GB heap allocation and performance tuning</li>
+									<li><strong>Cloud Deployment:</strong> Render.com with auto-scaling and load balancing</li>
+									<li><strong>Environment Management:</strong> Secure configuration with encrypted environment variables</li>
+									<li><strong>CI/CD Pipeline:</strong> Automated build, test, and deployment workflow</li>
+									<li><strong>Monitoring:</strong> Application performance monitoring and error tracking</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- Demo Data -->
+						<section class="doc-section" id="demo-data">
+							<h3>Demo Data & Testing</h3>
+							<div class="demo-data-features">
+								<h4>Comprehensive Demo Dataset</h4>
+								<p>The application includes extensive demo data for testing and demonstration purposes:</p>
+								<div class="demo-stats-grid">
+									<div class="demo-stat-item">
+										<span class="demo-stat-value">4</span>
+										<span class="demo-stat-label">US States</span>
+										<span class="demo-stat-detail">Arizona, California, Nevada, Utah</span>
+									</div>
+									<div class="demo-stat-item">
+										<span class="demo-stat-value">52</span>
+										<span class="demo-stat-label">Store Locations</span>
+										<span class="demo-stat-detail">Distributed across all states</span>
+									</div>
+									<div class="demo-stat-item">
+										<span class="demo-stat-value">100,000+</span>
+										<span class="demo-stat-label">Historical Orders</span>
+										<span class="demo-stat-detail">3 years of data (2021-2023)</span>
+									</div>
+									<div class="demo-stat-item">
+										<span class="demo-stat-value">25+</span>
+										<span class="demo-stat-label">Product Types</span>
+										<span class="demo-stat-detail">Various pizza types and sizes</span>
+									</div>
+								</div>
+								<ul class="feature-list">
+									<li><strong>Realistic Business Scenarios:</strong> Authentic order patterns and seasonal variations</li>
+									<li><strong>Performance Metrics:</strong> Pre-calculated analytics for immediate testing</li>
+									<li><strong>Role-Based Data:</strong> Different data access levels for each user role</li>
+									<li><strong>Historical Trends:</strong> Multi-year data for trend analysis and forecasting</li>
+									<li><strong>Geographic Distribution:</strong> Store performance across multiple states</li>
+								</ul>
+							</div>
+						</section>
+
+						<!-- AI Integration -->
+						<section class="doc-section" id="ai-integration">
+							<h3>AI Integration & Features</h3>
+							<div class="ai-features">
+								<h4>Google Gemma AI Capabilities</h4>
+								<ul class="feature-list">
+									<li><strong>Real-time Streaming:</strong> Server-Sent Events for token-by-token response delivery</li>
+									<li><strong>Business Context Integration:</strong> AI responses include live business data and metrics</li>
+									<li><strong>Role-based Responses:</strong> Tailored answers based on user permissions and access level</li>
+									<li><strong>Knowledge Base Integration:</strong> Contextual responses using business documentation</li>
+									<li><strong>Non-persistent Sessions:</strong> Conversation history limited to last 20 messages</li>
+									<li><strong>Intelligent Fallbacks:</strong> Rule-based responses when AI service unavailable</li>
+								</ul>
+							</div>
+
+							<div class="frontend-features">
+								<h4>Frontend Architecture</h4>
+								<div class="frontend-grid">
+									<div class="frontend-item">
+										<strong>Angular 19:</strong> Latest framework with standalone components
+									</div>
+									<div class="frontend-item">
+										<strong>TypeScript 5.7:</strong> Type-safe development with strict mode
+									</div>
+									<div class="frontend-item">
+										<strong>RxJS:</strong> Reactive programming with observables and operators
+									</div>
+									<div class="frontend-item">
+										<strong>PrimeNG + Tailwind:</strong> Component library with utility-first CSS
+									</div>
+									<div class="frontend-item">
+										<strong>ApexCharts:</strong> Interactive data visualization and charting
+									</div>
+									<div class="frontend-item">
+										<strong>PWA:</strong> Progressive Web App with offline capabilities
+									</div>
+								</div>
+							</div>
+						</section>
+
+						<!-- Main Demo Video -->
+						<section class="doc-section">
+							<h3>Platform Demonstration</h3>
+							<div class="main-demo-documentation">
+								<h4>Complete PizzaWorld+ Demo</h4>
+								<p>Watch our comprehensive demonstration showcasing all platform features, real-time analytics, dashboard functionality, and business intelligence capabilities.</p>
+								<div class="main-video-container">
+									<iframe 
+										src="https://www.youtube.com/embed/hr8LjElGZ5c" 
+										title="PizzaWorld Dashboard Demo - Comprehensive Feature Showcase"
+										frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</section>
+
+						<!-- Video Documentation -->
+						<section class="doc-section">
+							<h3>Technical Demonstrations</h3>
+							<div class="main-demo-documentation">
+								<h4>Email Service Demo</h4>
+								<p>Watch our live demonstration of the email service functionality, showing SMTP integration, automated notifications, and support ticket management in action.</p>
+								<div class="main-video-container">
+									<iframe 
+										src="https://www.youtube.com/embed/gkvtr3SErVA" 
+										title="PizzaWorld Email Service Demo - Live SMTP Integration & Support Management"
+										frameborder="0" 
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+										allowfullscreen>
+									</iframe>
+								</div>
+							</div>
+						</section>
+
+						<!-- Download Section -->
+						<section class="doc-section">
+							<h3>Complete Technical Documentation</h3>
+							<div class="download-section">
+								<p>Download comprehensive documentation including detailed code examples, API specifications, database schemas, and deployment guides.</p>
+								<div class="download-buttons">
+									<a href="/assets/PizzaWorldPlus_Instructions.pdf" class="download-button primary" target="_blank" rel="noopener noreferrer">
+										<Icon icon="download" size="1.2rem" />
+										<span>Installation & Setup Guide</span>
+									</a>
+									<a href="/assets/PizzaWorldPlus_CodeDocumentation.pdf" class="download-button secondary" target="_blank" rel="noopener noreferrer">
+										<Icon icon="code" size="1.2rem" />
+										<span>Technical Code Documentation</span>
+									</a>
+								</div>
+							</div>
+						</section>
 					</div>
 
 					<div class="quick-links">
@@ -279,6 +758,11 @@ import Icon from '../components/Icon.astro';
 		margin-bottom: 1rem;
 	}
 
+	.status-badge.complete {
+		background: var(--gradient-accent);
+		color: var(--gray-0);
+	}
+
 	.content-header h2 {
 		font-size: var(--text-2xl);
 		font-weight: 700;
@@ -436,14 +920,520 @@ import Icon from '../components/Icon.astro';
 		}
 	}
 
+	/* Documentation Content Styles */
+	.documentation-content {
+		padding: 2rem;
+	}
+
+	.doc-section {
+		margin-bottom: 4rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.doc-section:last-child {
+		border-bottom: none;
+	}
+
+	.doc-section h3 {
+		font-size: var(--text-2xl);
+		font-weight: 700;
+		color: var(--gray-0);
+		margin-bottom: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.doc-section h4 {
+		font-size: var(--text-lg);
+		font-weight: 600;
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+		margin-top: 2rem;
+	}
+
+	.doc-section h5 {
+		font-size: var(--text-base);
+		font-weight: 600;
+		color: var(--accent-regular);
+		margin-bottom: 1rem;
+		margin-top: 1.5rem;
+	}
+
+	.feature-list {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0;
+	}
+
+	.feature-list li {
+		padding: 0.5rem 0;
+		color: var(--gray-300);
+		line-height: 1.6;
+	}
+
+	.feature-list li strong {
+		color: var(--gray-0);
+	}
+
+	.tech-grid, .view-grid, .permissions-grid, .frontend-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1rem;
+		margin: 1rem 0;
+	}
+
+	.tech-item, .view-item, .permission-item, .frontend-item {
+		background: var(--gray-800);
+		border: 1px solid var(--gray-700);
+		border-radius: 0.5rem;
+		padding: 1rem;
+		color: var(--gray-300);
+	}
+
+	.tech-item strong, .view-item strong, .permission-item strong, .frontend-item strong {
+		color: var(--accent-regular);
+	}
+
+	.code-block {
+		margin: 1.5rem 0;
+	}
+
+	.code-block pre {
+		background: var(--gray-900);
+		border: 1px solid var(--gray-700);
+		border-radius: 0.5rem;
+		padding: 1.5rem;
+		overflow-x: auto;
+		font-family: 'Courier New', monospace;
+		font-size: var(--text-sm);
+		line-height: 1.4;
+		color: var(--gray-200);
+	}
+
+	.endpoint-group {
+		margin: 1.5rem 0;
+	}
+
+	.endpoint {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 1rem;
+		background: var(--gray-800);
+		border: 1px solid var(--gray-700);
+		border-radius: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.method {
+		padding: 0.25rem 0.75rem;
+		border-radius: 0.25rem;
+		font-size: var(--text-xs);
+		font-weight: 600;
+		text-transform: uppercase;
+		min-width: 60px;
+		text-align: center;
+	}
+
+	.method.get {
+		background: var(--green);
+		color: white;
+	}
+
+	.method.post {
+		background: var(--blue);
+		color: white;
+	}
+
+	.path {
+		font-family: 'Courier New', monospace;
+		font-size: var(--text-sm);
+		color: var(--gray-0);
+		font-weight: 500;
+		min-width: 200px;
+	}
+
+	.description {
+		color: var(--gray-300);
+		font-size: var(--text-sm);
+	}
+
+	.auth-steps {
+		list-style: decimal;
+		padding-left: 1.5rem;
+		color: var(--gray-300);
+		line-height: 1.6;
+	}
+
+	.auth-steps li {
+		margin-bottom: 0.5rem;
+	}
+
+	.auth-steps code {
+		background: var(--gray-800);
+		padding: 0.2rem 0.4rem;
+		border-radius: 0.25rem;
+		font-family: 'Courier New', monospace;
+		font-size: var(--text-sm);
+		color: var(--accent-regular);
+	}
+
+	.metrics-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.metric-item {
+		text-align: center;
+		background: var(--gray-800);
+		border: 1px solid var(--gray-700);
+		border-radius: 0.75rem;
+		padding: 2rem 1rem;
+	}
+
+	.metric-value {
+		display: block;
+		font-size: var(--text-3xl);
+		font-weight: 700;
+		color: var(--accent-regular);
+		margin-bottom: 0.5rem;
+	}
+
+	.metric-label {
+		display: block;
+		font-size: var(--text-sm);
+		color: var(--gray-300);
+	}
+
+	.download-section {
+		text-align: center;
+		padding: 2rem;
+		background: var(--gray-800);
+		border-radius: 0.75rem;
+		border: 1px solid var(--gray-700);
+		margin: 2rem 0;
+	}
+
+	.download-section p {
+		color: var(--gray-300);
+		margin-bottom: 2rem;
+		line-height: 1.6;
+	}
+
+	.download-buttons {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	.download-button {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding: 1rem 2rem;
+		border-radius: 0.5rem;
+		text-decoration: none;
+		font-weight: 600;
+		transition: all 0.3s ease;
+		min-width: 250px;
+		justify-content: center;
+	}
+
+	.download-button.primary {
+		background: var(--gradient-accent);
+		color: var(--gray-0);
+	}
+
+	.download-button.secondary {
+		background: var(--gray-700);
+		color: var(--gray-0);
+		border: 1px solid var(--gray-600);
+	}
+
+	.download-button:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+	}
+
+	.download-button.secondary:hover {
+		background: var(--gray-600);
+		border-color: var(--accent-regular);
+	}
+
+	/* Demo Data Styles */
+	.demo-stats-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.demo-stat-item {
+		text-align: center;
+		background: var(--gray-800);
+		border: 1px solid var(--gray-700);
+		border-radius: 0.75rem;
+		padding: 2rem 1rem;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.demo-stat-item::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 3px;
+		background: var(--accent-regular);
+	}
+
+	.demo-stat-value {
+		display: block;
+		font-size: var(--text-3xl);
+		font-weight: 700;
+		color: var(--accent-regular);
+		margin-bottom: 0.5rem;
+	}
+
+	.demo-stat-label {
+		display: block;
+		font-size: var(--text-base);
+		font-weight: 600;
+		color: var(--gray-0);
+		margin-bottom: 0.5rem;
+	}
+
+	.demo-stat-detail {
+		display: block;
+		font-size: var(--text-sm);
+		color: var(--gray-400);
+		font-style: italic;
+	}
+
+	/* Security Note Styles */
+	.security-note {
+		margin-top: 2rem;
+		padding: 1.5rem;
+		background: var(--gray-800);
+		border: 1px solid var(--accent-regular);
+		border-radius: 0.75rem;
+		border-left: 4px solid var(--accent-regular);
+	}
+
+	.security-note h5 {
+		color: var(--accent-regular);
+		font-size: var(--text-base);
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.security-note p {
+		color: var(--gray-300);
+		font-size: var(--text-sm);
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.security-note code {
+		background: var(--gray-900);
+		padding: 0.2rem 0.4rem;
+		border-radius: 0.25rem;
+		font-family: 'Courier New', monospace;
+		font-size: var(--text-sm);
+		color: var(--accent-regular);
+	}
+
+	/* Main Demo Video Documentation */
+	.main-demo-documentation {
+		background: var(--gray-900);
+		padding: 2rem;
+		border-radius: 1rem;
+		border: 1px solid var(--gray-700);
+		margin: 2rem 0;
+	}
+
+	.main-demo-documentation h4 {
+		font-size: var(--text-2xl);
+		font-weight: 700;
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+		background: var(--gradient-accent);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+	}
+
+	.main-demo-documentation p {
+		color: var(--gray-300);
+		margin-bottom: 2rem;
+		line-height: 1.6;
+		font-size: var(--text-lg);
+	}
+
+	.main-video-container {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		border-radius: 0.75rem;
+		overflow: hidden;
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+		background: var(--gray-800);
+		border: 2px solid var(--accent-regular);
+	}
+
+	.main-video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	/* Tech Docs Section */
+	.tech-docs-section {
+		padding: 4rem 0;
+		background: var(--gray-900);
+		border-bottom: 1px solid var(--gray-800);
+		border-radius: 2rem;
+		margin: 2rem;
+		border: 1px solid var(--gray-800);
+	}
+
+	.tech-docs-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	.tech-docs-header h2 {
+		font-size: var(--text-3xl);
+		font-weight: 700;
+		color: var(--gray-0);
+		margin-bottom: 1rem;
+	}
+
+	.tech-docs-header p {
+		font-size: var(--text-lg);
+		color: var(--gray-300);
+		max-width: 60ch;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	.download-buttons-container {
+		display: flex;
+		gap: 2rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+
+	.download-buttons-container .download-button {
+		flex: 1;
+		min-width: 280px;
+		max-width: 350px;
+		padding: 1.5rem 2rem;
+		font-size: var(--text-base);
+		font-weight: 600;
+		border-radius: 2rem;
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+		transition: all 0.3s ease;
+		text-align: center;
+	}
+
+	.download-buttons-container .download-button.primary {
+		background: linear-gradient(135deg, var(--accent-regular), var(--accent-dark));
+		color: var(--gray-0);
+		border: 2px solid var(--accent-regular);
+	}
+
+	.download-buttons-container .download-button.secondary {
+		background: var(--gray-800);
+		color: var(--gray-0);
+		border: 2px solid var(--gray-600);
+	}
+
+	.download-buttons-container .download-button:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+	}
+
+	.download-buttons-container .download-button.primary:hover {
+		background: linear-gradient(135deg, var(--accent-dark), var(--accent-regular));
+		border-color: var(--accent-light);
+	}
+
+	.download-buttons-container .download-button.secondary:hover {
+		background: var(--gray-700);
+		border-color: var(--accent-regular);
+		color: var(--gray-0);
+	}
+
 	@media (max-width: 40em) {
-		.content-placeholder {
-			padding: 2rem 1rem;
-			margin: 1rem;
+		.documentation-content {
+			padding: 1rem;
 		}
 
-		.placeholder-features {
-			text-align: center;
+		.doc-section {
+			margin-bottom: 2rem;
+		}
+
+		.tech-grid, .view-grid, .permissions-grid, .frontend-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.metrics-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.endpoint {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.5rem;
+		}
+
+		.path {
+			min-width: auto;
+		}
+
+		.download-buttons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.download-button {
+			min-width: 100%;
+		}
+
+		.tech-docs-section {
+			padding: 2rem 0;
+		}
+
+		.tech-docs-header h2 {
+			font-size: var(--text-2xl);
+		}
+
+		.tech-docs-header p {
+			font-size: var(--text-base);
+		}
+
+		.download-buttons-container {
+			flex-direction: column;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.download-buttons-container .download-button {
+			min-width: 100%;
+			max-width: 100%;
 		}
 	}
 </style> 
