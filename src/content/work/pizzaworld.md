@@ -5,7 +5,7 @@ img: /assets/logo.png
 img_alt: PizzaWorld+ enterprise analytics platform logo
 description: |
   Enterprise-grade business intelligence and analytics platform for multi-location pizza chains. 
-  Real-time insights, performance monitoring, and data-driven decision making—built for scale.
+  Real-time insights, performance monitoring, and data-driven decision making-built for scale.
 tags:
   - Full-Stack
   - Analytics
