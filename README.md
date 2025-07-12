@@ -12,8 +12,8 @@ This is the **official website** for **PizzaWorld+**, an enterprise-grade busine
 |----------|-----|
 | **Official Website** | [www.pizzaworldplus.tech](https://www.pizzaworldplus.tech) |
 | **Main Application Repository** | [github.com/lou1sa3/PizzaWorld](https://github.com/lou1sa3/PizzaWorld) |
-| **Live Dashboard** | [dashboard.pizzaworldplus.tech](https://dashboard.pizzaworldplus.tech) |
-| **Documentation** | [doku.pizzaworldplus.tech](https://doku.pizzaworldplus.tech) |
+| **Live Dashboard** | [dashboard.pizzaworldplus.tech](https://dashboard.pizzaworldplus.tech) -> currently offline|
+| **Documentation** | [doku.pizzaworldplus.tech](https://www.pizzaworldplus.tech/documentation/) |
 
 ## Academic Context
 
